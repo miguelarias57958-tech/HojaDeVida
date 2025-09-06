@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+    <!DOCTYPE html> 
 <html lang="es"> 
 <head>
     <meta charset="UTF-8"> 
@@ -6,13 +6,18 @@
     <title>Mi hoja de vida</title> 
     <link rel="stylesheet" href="styles.css"> 
 </head>
-<body> <!-- Todo el contenido visible de la página va dentro del body -->
-    <div class="container"> <!-- Contenedor principal de la página -->
-        
-        <header> <!-- Sección de cabecera, normalmente contiene nombre, foto, menú, etc. -->
+<body>
+    <div class="container">
+
+        <header>
             <img src="imagenes/IMG_7171.jpg" alt="Mi foto" class="profile-pic">
+
+            <div class="print-button">
+                <button onclick="window.print()">Imprimir hoja de vida</button>
+            </div>
+
             <h1>Miguel Arias Cortes</h1>
-            <p>Desarrollador Web Junior</p> 
+            <p class="subtitle">Desarrollador Web Junior</p> 
         </header>
 
         <section class="section">
@@ -23,15 +28,15 @@
                 <li><strong>Ubicación:</strong> Aguadas, Caldas</li>
             </ul>
         </section>
-        
+
         <section class="section">
             <h2>Educación</h2>
-            <div class="section">
+            <div class="item">
                 <h3>Institución Educativa Roberto Peláez</h3>
                 <p>Bachiller Técnico en Diseño Web - 2025</p> 
             </div>
         </section>
-        
+
         <section class="section">
             <h2>Experiencia Laboral</h2>
             <div class="item">
@@ -39,17 +44,18 @@
                 <p>Diseño de interfaces en Figma - 2025</p>
             </div>
         </section>
-    <section class="section">
-      <h2>habilidades</h2>
-      <ul  class="skills">
-        <li>html/css</li>
-        <li>figma</li>
-        <li>javascript basico</li>
 
+        <section class="section">
+            <h2>Habilidades</h2>
+            <ul class="skills">
+                <li>HTML/CSS</li>
+                <li>Figma</li>
+                <li>JavaScript básico</li>
+            </ul>
+        </section>
 
-
-
-      </ul>
     </div>
 </body>
 </html>
+
+
