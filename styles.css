@@ -1,105 +1,136 @@
-
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background: #f4f6f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa;
     color: #333;
     line-height: 1.6;
 }
 
-/* ---------- Contenedor principal ---------- */
+/* Contenedor principal */
 .container {
-    max-width: 900px;
+    max-width: 800px;
     margin: 40px auto;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background-color: #fff;
     padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
 }
 
-/* ---------- Cabecera ---------- */
+/* Cabecera */
 header {
     text-align: center;
     margin-bottom: 30px;
-    border-bottom: 2px solid #eaeaea;
-    padding-bottom: 20px;
 }
 
-header .profile-pic {
+.profile-pic {
     width: 140px;
     height: 140px;
-    border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
-    border: 4px solid #4CAF50;
+    border-radius: 50%;
+    border: 4px solid #007BFF;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-header h1 {
-    font-size: 2rem;
-    color: #222;
+h1 {
+    margin-top: 15px;
+    font-size: 28px;
+    color: #007BFF;
 }
 
-header p {
-    font-size: 1.1rem;
-    color: #666;
+.subtitle {
+    font-size: 18px;
+    color: #555;
 }
 
-/* ---------- Secciones ---------- */
+/* Botón imprimir */
+.print-button {
+    margin-top: 15px;
+}
+
+.print-button button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.print-button button:hover {
+    background-color: #0056b3;
+}
+
+/* Secciones */
 .section {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .section h2 {
-    font-size: 1.5rem;
-    color: #4CAF50;
-    margin-bottom: 15px;
-    border-left: 5px solid #4CAF50;
-    padding-left: 10px;
-}
-
-.section ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.section ul li {
+    font-size: 22px;
     margin-bottom: 10px;
+    border-bottom: 2px solid #007BFF;
+    display: inline-block;
+    padding-bottom: 5px;
+    color: #007BFF;
 }
 
-/* ---------- Experiencia & Educación ---------- */
 .item h3 {
-    font-size: 1.2rem;
+    margin-top: 10px;
     color: #333;
 }
 
 .item p {
+    margin-left: 10px;
     color: #555;
-    font-size: 1rem;
 }
 
-/* ---------- Habilidades ---------- */
+/* Lista de habilidades */
 .skills {
+    list-style: none;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
 .skills li {
-    background: #4CAF50;
+    background-color: #007BFF;
     color: white;
-    padding: 8px 15px;
+    padding: 8px 14px;
     border-radius: 20px;
-    font-size: 0.9rem;
-    transition: 0.3s ease;
+    font-size: 14px;
 }
 
-.skills li:hover {
-    background: #45a049;
-    transform: scale(1.05);
-    cursor: default;
+/* Lista general */
+ul {
+    list-style-type: none;
+    padding-left: 0;
 }
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* Imprimir: ocultar botón */
+@media print {
+    .print-button {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    .container {
+        box-shadow: none;
+        padding: 0;
+    }
+}
+
