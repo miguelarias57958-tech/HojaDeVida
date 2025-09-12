@@ -1,136 +1,91 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7fa;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
     color: #333;
-    line-height: 1.6;
 }
 
-/* Contenedor principal */
 .container {
     max-width: 800px;
-    margin: 40px auto;
-    background-color: #fff;
+    margin: auto;
+    background-color: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Cabecera */
 header {
     text-align: center;
-    margin-bottom: 30px;
 }
 
 .profile-pic {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #007BFF;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 3px solid #000; /* Borde negro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin-bottom: 10px;
 }
 
 h1 {
-    margin-top: 15px;
-    font-size: 28px;
+    margin: 10px 0 5px;
+}
+
+h2 {
     color: #007BFF;
+    margin-top: 30px;
 }
 
-.subtitle {
-    font-size: 18px;
-    color: #555;
-}
-
-/* Botón imprimir */
-.print-button {
-    margin-top: 15px;
-}
-
-.print-button button {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 25px;
-    border: none;
-    border-radius: 5px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.print-button button:hover {
-    background-color: #0056b3;
-}
-
-/* Secciones */
 .section {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
-.section h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #007BFF;
-    display: inline-block;
-    padding-bottom: 5px;
-    color: #007BFF;
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.item h3 {
-    margin-top: 10px;
-    color: #333;
-}
-
-.item p {
-    margin-left: 10px;
-    color: #555;
-}
-
-/* Lista de habilidades */
-.skills {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+li {
+    margin-bottom: 5px;
 }
 
 .skills li {
+    background-color: #eef;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #777;
+}
+
+.print-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
     background-color: #007BFF;
     color: white;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Lista general */
-ul {
-    list-style-type: none;
-    padding-left: 0;
+.print-button:hover {
+    background-color: #0056b3;
 }
 
-ul li {
-    margin-bottom: 8px;
-}
-
-/* Imprimir: ocultar botón */
+/* Ocultar el botón al imprimir */
 @media print {
     .print-button {
         display: none;
     }
-
-    body {
-        background-color: white;
-    }
-
-    .container {
-        box-shadow: none;
-        padding: 0;
-    }
 }
+
+
 
